@@ -1,26 +1,101 @@
-@import "tailwindcss";
+/* --------------------- Styles Guide By Bharath Kumar --------------------- */
 
+/* --------------------- Light Mode --------------------- */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Colors */
+  --color-dark: #ffffff;
+  --color-light: #121212;
+  --color-gray: #55585a;
+  --color-lightgray: #e9eaeb;
+  --color-white: #ffffff;
+  --color-selection: #e0813d;
+
+  --color-border: rgba(28, 29, 32, 0.175);
+  --color-border-solid: #d2d2d2;
+
+  /* Animation */
+  --animation-primary: all 0.5s cubic-bezier(0.7, 0, 0.3, 1);
+  --animation-fast: all 0.3s cubic-bezier(0.7, 0, 0.3, 1);
+  --animation-smooth: all 0.7s cubic-bezier(0.7, 0, 0.3, 1);
+  --animation-slow: all 0.9s cubic-bezier(0.7, 0, 0.3, 1);
+
+  /* Layout */
+  --section-padding: clamp(5em, 21vh, 12em);
+  --container-padding: clamp(2.5em, 8vw, 8em);
+  --gap-padding: clamp(1.5em, 4vw, 2.5em);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
+/* --------------------- Dark Mode --------------------- */
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --color-dark: #121212;
+    --color-light: #ffffff;
+    --color-gray: #999d9e;
+    --color-lightgray: #2a2a2a;
+    --color-white: #121212;
+    --color-selection: #e0813d;
+
+    --color-border: rgba(255, 255, 255, 0.2);
+    --color-border-solid: #545557;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* --------------------- Responsive --------------------- */
+@media screen and (max-width: 1200px) {
+  :root {
+    --container-padding: 6vw;
+  }
 }
+
+@media screen and (max-width: 720px) {
+  :root {
+    --section-padding: 12vh;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  :root {
+    --color-border: rgba(28, 29, 32, 0.225);
+    --container-padding: clamp(1.25em, 4vw, 2.5em);
+    --section-padding: max(2.5em, 12vh);
+    --color-border: rgba(255, 255, 255, 0.225);
+  }
+}
+
+/* -------------------- Body --------------------  */
+
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+li,
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+/* ----------- Selections ---------- */
+::selection {
+  background-color: var(--color-selection);
+  color: var(--color-light);
+  text-shadow: none;
+}
+::-moz-selection {
+  background-color: var(--color-selection);
+  color: var(--color-light);
+  text-shadow: none;
+}
+
+html,
+body {
+  width: 100%;
+  position: relative;
+  background-color: var(--color-dark);
+  color: var(--color-light);
+}
+
+@import "tailwindcss";
