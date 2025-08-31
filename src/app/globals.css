@@ -8,9 +8,11 @@
   --color-gray: #55585a;
   --color-lightgray: #e9eaeb;
   --color-white: #ffffff;
+  --color-black: #121212;
   --color-selection: #e0813d;
+  --color-hover: #e9eaeba2;
 
-  --color-border: rgba(28, 29, 32, 0.175);
+  --color-border: #b4b4b5;
   --color-border-solid: #d2d2d2;
 
   /* Animation */
@@ -32,10 +34,12 @@
     --color-light: #ffffff;
     --color-gray: #999d9e;
     --color-lightgray: #2a2a2a;
-    --color-white: #121212;
+    --color-white: #ffffff;
+    --color-black: #121212;
     --color-selection: #e0813d;
+    --color-hover: #2a2a2aa2;
 
-    --color-border: rgba(255, 255, 255, 0.2);
+    --color-border: #57565633;
     --color-border-solid: #545557;
   }
 }
@@ -96,6 +100,10 @@ body {
   position: relative;
   background-color: var(--color-dark);
   color: var(--color-light);
+}
+
+a {
+  cursor: pointer;
 }
 
 @import "tailwindcss";
