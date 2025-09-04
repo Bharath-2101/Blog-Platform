@@ -1,0 +1,53 @@
+.MainContianer {
+  width: 100dvw;
+  padding: 0vw 5vw;
+  margin-top: calc(clamp(1rem, 5vw, 3rem));
+  margin-bottom: calc(clamp(4rem, 4.5vw, 5rem) - 10px);
+  .MainTitle {
+    width: 100%;
+    font-size: clamp(2.2rem, 7vw, 4.5rem);
+    margin-bottom: calc(clamp(5rem, 8vw, 7rem) + 10px);
+    font-family: var(--font-inter);
+    font-weight: 600;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    line-height: clamp(1.8rem, 7vw, 4.5rem);
+  }
+  .ArticlesContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .ArticleCon {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-family: var(--font-playfair);
+      color: var(--color-gray);
+      font-size: 18px;
+      line-height: 28px;
+      .ArticleDetails {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 80% 20%;
+        div {
+          &:nth-child(1) {
+            text-align: left;
+          }
+          &:nth-child(2) {
+            text-align: right;
+          }
+        }
+      }
+      .Divider {
+        height: 2px;
+        width: 100%;
+        background-color: var(--color-border);
+      }
+    }
+  }
+}
