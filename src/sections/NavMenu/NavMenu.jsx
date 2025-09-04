@@ -62,8 +62,8 @@ const NavMenu = () => {
     <>
       <div className={styles.Header}>
         <div className={styles.HeadContainer}>
-          <a href="/">
-            <div>B</div>
+          <a href="/" className={styles.Logo}>
+            <div>Bharath Kumar</div>
           </a>
           <div className={styles.Nav}>
             <div
